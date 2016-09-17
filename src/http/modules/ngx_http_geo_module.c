@@ -1446,7 +1446,7 @@ ngx_http_geo_include_binary_base(ngx_conf_t *cf, ngx_http_geo_conf_ctx_t *ctx,
 
     name->data[name->len - 4] = ch;
 
-    if (mtime < ngx_file_mtime(&fi)) {
+    if (mtime < (long)ngx_file_mtime(&fi)) {
         ngx_conf_log_error(NGX_LOG_WARN, cf, 0,
                            "stale binary geo range base \"%s\"", name->data);
         goto failed;
