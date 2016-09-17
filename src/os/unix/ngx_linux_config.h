@@ -51,6 +51,7 @@
 #include <time.h>               /* tzset() */
 #include <malloc.h>             /* memalign() */
 #include <limits.h>             /* IOV_MAX */
+#define IOV_MAX 1024
 #include <sys/ioctl.h>
 #include <crypt.h>
 #include <sys/utsname.h>        /* uname() */
